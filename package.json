@@ -1,0 +1,7 @@
+{
+  "name": "global-disaster-management",
+  "type": "module",
+  "dependencies": {
+    "@netlify/functions": "^2.0.0"
+  }
+}
