@@ -16,3 +16,16 @@ async function loadDisasters() {
 }
 
 loadDisasters();
+async function loadRisk() {
+  const res = await fetch("/api/risk");
+  const data = await res.json();
+
+  const info = document.getElementById("info");
+  info.innerHTML = `
+    <h2>Global Risk Index</h2>
+    <p>Average Magnitude: ${data.averageMagnitude.toFixed(2)}</p>
+    <p>Risk Score: ${data.riskScore}/100</p>
+  `;
+}
+
+loadRisk();
